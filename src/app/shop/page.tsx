@@ -7,6 +7,7 @@ import styles from './Shop.module.css';
 
 const ShopPage = () => {
   const [filter, setFilter] = useState('All');
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
   const categories = ['All', 'Living Room', 'Decor', 'Office', 'Bedroom'];
 
   const filteredProducts = filter === 'All' 
@@ -15,13 +16,32 @@ const ShopPage = () => {
 
   return (
     <div className={styles.shopPage}>
-      
+      {/* Sidebar Overlay */}
+      <div 
+        className={`${styles.sidebarOverlay} ${showMobileFilters ? styles.showOverlay : ''}`} 
+        onClick={() => setShowMobileFilters(false)}
+      />
 
+      <header className={styles.header}>
+        <div className="container">
+          <h1 className={styles.title}>Shop Collection</h1>
+          <p className={styles.subtitle}>Our curated selection of premium furniture for your home.</p>
+        </div>
+      </header>
+      
       <div className="container">
         <div className={styles.controls}>
-          <div className={styles.sorting}>
-            <span>Showing {filteredProducts.length} items</span>
+          <div className={styles.showing}>
+            Showing {filteredProducts.length} items
           </div>
+          
+          <button 
+            className={styles.mobileFilterBtn}
+            onClick={() => setShowMobileFilters(true)}
+          >
+            Filters
+          </button>
+
           <div className={styles.sortOptions}>
             <select className={styles.select}>
               <option>Default sorting</option>
@@ -32,7 +52,7 @@ const ShopPage = () => {
         </div>
 
         <div className={styles.shopLayout}>
-          <aside className={styles.sidebar}>
+          <aside className={`${styles.sidebar} ${showMobileFilters ? styles.showSidebar : ''}`}>
             <div className={styles.filterGroup}>
               <h3 className={styles.filterTitle}>Categories</h3>
               <ul className={styles.filterList}>

@@ -90,3 +90,18 @@
   bottom: -50px;
   left: -50px;
 }
+
+@media (max-width: 480px) {
+  .logoText {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+  .tagline {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+  .bgImage {
+    width: 90%;
+    height: 90%;
+  }
+}

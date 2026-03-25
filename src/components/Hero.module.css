@@ -180,3 +180,39 @@
     bottom: 20%;
   }
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .visuals {
+    height: 400px;
+  }
+  .decorativeCircle {
+    width: 320px;
+    height: 320px;
+  }
+  .numberBg {
+    font-size: 12rem;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .visuals {
+    height: 300px;
+  }
+  .decorativeCircle {
+    width: 250px;
+    height: 250px;
+  }
+  .brandSubtitle {
+    font-size: 0.8rem;
+  }
+}
