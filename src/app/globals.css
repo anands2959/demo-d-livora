@@ -89,3 +89,30 @@ button {
   background-color: var(--accent-orange);
   color: white;
 }
+
+/* --- Premium Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0ede8;
+  border-left: 1px solid #e5e2dd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-orange) 0%, #ff9d6e 100%);
+  border: 2px solid #f0ede8;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--accent-orange) #f0ede8;
+}

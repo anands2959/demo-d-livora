@@ -68,6 +68,37 @@ export const products: Product[] = [
     image: '/images/product-5.png',
     category: 'Bedroom',
     description: 'Elegant glass pendant light that creates a warm, inviting atmosphere in any bedroom or dining area.'
+  },
+  {
+    id: 6,
+    slug: 'velvet-armchair-green',
+    name: 'Emerald Velvet Armchair',
+    price: '$450',
+    rating: 5,
+    image: '/images/product-6.png',
+    category: 'Living Room',
+    badge: { text: '-20%', type: 'sale' },
+    description: 'A luxurious velvet armchair in a stunning emerald green, featuring elegant curved lines and polished gold legs.'
+  },
+  {
+    id: 7,
+    slug: 'walnut-coffee-table',
+    name: 'Walnut Coffee Table',
+    price: '$320',
+    rating: 4,
+    image: '/images/product-7.png',
+    category: 'Living Room',
+    description: 'Modern minimalist coffee table handcrafted from premium walnut wood with a thick tempered glass top.'
+  },
+  {
+    id: 8,
+    slug: 'brass-floor-lamp',
+    name: 'Brass Floor Lamp',
+    price: '$190',
+    rating: 5,
+    image: '/images/product-8.png',
+    category: 'Decor',
+    description: 'A contemporary designer floor lamp with a slim brass stem and an elegant white marble base.'
   }
 ];
 
