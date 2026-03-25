@@ -1,0 +1,146 @@
+.header {
+  background-color: transparent;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.iconBox {
+  background-color: var(--accent-orange);
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.logoText {
+  color: var(--text-primary);
+}
+
+.nav {
+  flex: 1;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.navList li a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-secondary);
+}
+
+.navList li a.active {
+  color: var(--accent-orange);
+}
+
+.navList li a:hover {
+  color: var(--accent-orange);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  max-width: 400px;
+  flex: 1;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.categoryDropdown {
+  padding: 0 1rem;
+  border-left: 1px solid var(--border-light);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.searchButton {
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.actionIcon {
+  position: relative;
+  color: var(--text-primary);
+}
+
+.cartIconWrapper {
+  position: relative;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--accent-orange);
+  color: white;
+  font-size: 0.65rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
