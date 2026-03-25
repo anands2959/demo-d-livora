@@ -51,10 +51,13 @@ const Header = () => {
 
         {/* Action Icons */}
         <div className={styles.actions}>
-          <button className={styles.mobileSearchIcon}>
+          <button 
+            className={styles.mobileSearchIcon}
+            onClick={() => setIsMenuOpen(true)}
+          >
             <Search size={20} />
           </button>
-          <Link href="/login" className={styles.actionItem}>
+          <Link href="/login" className={`${styles.actionItem} ${styles.actionLogin}`}>
             <User size={20} />
             <span className={styles.actionLabel}>Login</span>
           </Link>
@@ -74,14 +77,14 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            <motion.div
+            <motion.div 
               className={styles.menuOverlay}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsMenuOpen(false)}
             />
-            <motion.div
+            <motion.div 
               className={styles.mobileDrawer}
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
@@ -90,7 +93,6 @@ const Header = () => {
             >
               <div className={styles.drawerHeader}>
                 <div className={styles.logo}>
-                  <span className={styles.iconBox}>L</span>
                   <span className={styles.logoText}>LIVORA</span>
                 </div>
                 <button onClick={() => setIsMenuOpen(false)}>
@@ -99,7 +101,11 @@ const Header = () => {
               </div>
 
               <div className={styles.drawerSearch}>
-                <input type="text" placeholder="Search furniture..." />
+                <input 
+                  type="text" 
+                  placeholder="Search furniture..." 
+                  autoFocus 
+                />
                 <Search size={18} />
               </div>
 

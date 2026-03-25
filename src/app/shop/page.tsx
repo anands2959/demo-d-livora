@@ -14,6 +14,18 @@ const ShopPage = () => {
     ? products 
     : products.filter(p => p.category === filter);
 
+  // Lock scroll when mobile filters are open
+  React.useEffect(() => {
+    if (showMobileFilters) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [showMobileFilters]);
+
   return (
     <div className={styles.shopPage}>
       {/* Sidebar Overlay */}
@@ -22,12 +34,6 @@ const ShopPage = () => {
         onClick={() => setShowMobileFilters(false)}
       />
 
-      <header className={styles.header}>
-        <div className="container">
-          <h1 className={styles.title}>Shop Collection</h1>
-          <p className={styles.subtitle}>Our curated selection of premium furniture for your home.</p>
-        </div>
-      </header>
       
       <div className="container">
         <div className={styles.controls}>

@@ -171,6 +171,10 @@
     display: block;
   }
 
+  .actionLogin {
+    display: none !important;
+  }
+
   .actionLabel {
     display: none;
   }
@@ -181,8 +185,16 @@
 }
 
 @media (max-width: 480px) {
+  .headerContainer {
+    gap: 1rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
   .logoText {
-    display: none;
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 }
 
