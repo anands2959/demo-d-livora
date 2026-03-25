@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
-import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader";
+import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-main",
 });
 
 const outfit = Outfit({
-  variable: "--font-outfit",
   subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
   title: "LIVORA | Premium Furniture Store",
   description: "Modern and professional furniture store design.",
 };
-
-// import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -29,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${outfit.variable}`}>
+        <Preloader />
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
